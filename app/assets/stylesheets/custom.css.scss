@@ -8,13 +8,33 @@
 body {
 	height: 100%;
 }
-.this {
-  width: 20%;
-  float: left;
-  height: 581.55px;
 
+.width-r {
+  position: relative;
 }
 
+.this {
+  width: 20%;
+	float: left;
+  height: 581.55px;
+  position: relative;
+
+}
+.inside {
+  width: 100%;
+
+  float: left;
+  height: 581.55px;
+  position: absolute;
+  transition: 0.5s;
+}
+/*
+.inside:hover {
+
+  z-index:100;
+  width: 110%;
+}
+*/
 .navbar-ma {
 	/* remove space between the navbar and the images below */
 	margin-bottom: 0px;
