@@ -1,2 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar {
+	background-color: #fff;
+}
+
+body {
+	height: 100%;
+}
+.this {
+  width: 20%;
+  float: left;
+  height: 581.55px;
+
+}
+
+.navbar-ma {
+	/* remove space between the navbar and the images below */
+	margin-bottom: 0px;
+}
+
+.jumbotron {
+	height: 220px;
+	margin-bottom: 0px;
+	z-index: 0;
+}
+
+.container-fluid {
+	padding: 0px;
+}

@@ -1,1 +1,36 @@
-Welcome
+
+<div class="container-fluid" id="width-r">
+	<%= image_tag("wood1.jpg",class: "this h-h")  %>
+	<%= image_tag("wood2.jpg",class: "this")  %>
+	<%= image_tag("wood3.jpg",class: "this")  %>
+	<%= image_tag("wood4.jpg",class: "this")  %>
+	<%= image_tag("wood5.jpg",class: "this", id: "last-im")  %>
+</div>
+<div class="jumbotron">
+	<h1 align="center"> Here come the ads</h1>
+</div>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript"> 
+		$(document).ready(function(){
+		  $('.this').hover(function() {
+	    	var self = this;
+	    	$('.this').not(this).animate({
+	        	width: "18.75%"
+	    	}, "fast").promise().done(function() {
+	        	$(self).animate({
+            		width: "25%"
+	        	}, "fast");
+	    	});
+			}, function() {
+	    		var self = this;
+	    		$(this).animate({
+	        		width: "20%"
+	    		}, "fast").promise().done(function() {
+	        		$('.this').not(self).animate({
+	            		width: "20%"
+	        		}, "fast")
+	    		});
+			});
+	  });
+</script>
