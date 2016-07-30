@@ -21,20 +21,21 @@ body {
 
 }
 .inside {
-  width: 100%;
-
+	width: 400px;
+	overflow: hidden;
   float: left;
   height: 581.55px;
   position: absolute;
-  transition: 0.5s;
+  transition: 1s;
 }
-/*
+
 .inside:hover {
 
   z-index:100;
-  width: 110%;
-}
-*/
+  width: 410px;
+
+	}
+
 .navbar-ma {
 	/* remove space between the navbar and the images below */
 	margin-bottom: 0px;
