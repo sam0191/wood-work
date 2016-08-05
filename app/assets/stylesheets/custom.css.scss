@@ -12,17 +12,22 @@ body {
 .width-r {
   position: relative;
 }
-
+#clip {
+  position: absolute;
+  clip: rect(0, 0, 581.55px, -100px);
+  /* clip: shape(top, right, bottom, left); NB 'rect' is the only available option */
+}
 .this {
   width: 20%;
 	float: left;
   height: 581.55px;
   position: relative;
+  padding: 0;
 
 }
 .inside {
-	width: 400px;
-	overflow: hidden;
+  width: 100%;
+
   float: left;
   height: 581.55px;
   position: absolute;
@@ -32,9 +37,8 @@ body {
 .inside:hover {
 
   z-index:100;
-  width: 410px;
-
-	}
+  width: 110%;
+}
 
 .navbar-ma {
 	/* remove space between the navbar and the images below */
