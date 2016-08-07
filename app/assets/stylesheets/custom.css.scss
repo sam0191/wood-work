@@ -12,33 +12,56 @@ body {
 .width-r {
   position: relative;
 }
-#clip {
-  position: absolute;
-  clip: rect(0, 0, 581.55px, -100px);
-  /* clip: shape(top, right, bottom, left); NB 'rect' is the only available option */
-}
+
 .this {
-  width: 20%;
+  width: 400px;
 	float: left;
   height: 581.55px;
   position: relative;
   padding: 0;
 
 }
+.so-1 {
+	clip: rect(0px, 320px, 581.55px, 0px);
+}
+.so-1:hover {
+	clip: rect(0px, 400px, 581.55px, 0px);
+	transition: 1s;
+	z-index: 100;
+}
+.so-2 {
+	margin-left: 280px;
+	clip: rect(0px, 360px, 581.55px, 40px);
+}
+.so-3 {
+	margin-left: 600px;
+	clip: rect(0px, 360px, 581.55px, 40px);
+}
+.so-3:hover {
+	clip: rect(0px, 400px, 581.55px, 0px);
+	transition: 1s;
+	z-index: 100;
+}
+.so-4 {
+	margin-left: 920px;
+	clip: rect(0px, 360px, 581.55px, 40px);
+}
+.so-4:hover {
+	clip: rect(0px, 400px, 581.55px, 0px);
+	transition: 0.5s;
+	z-index: 100;
+}
+.so-5 {
+	margin-left: 1240px;
+	clip: rect(0px, 400px, 581.55px, 40px);
+}
 .inside {
-  width: 100%;
-
-  float: left;
+  width: 400px;
   height: 581.55px;
   position: absolute;
-  transition: 0.5s;
+
 }
 
-.inside:hover {
-
-  z-index:100;
-  width: 110%;
-}
 
 .navbar-ma {
 	/* remove space between the navbar and the images below */
