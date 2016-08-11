@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-12 text-center">
+		<ul class="category-show-p">
+			<li><h1><%= @category.name %></h1></li>
+			<li><%= image_tag(@category.profile_image.url, class: "img-thumbnail") %></li><br/>
+			<li><p><%= @category.description %></p></li>
+		</ul>	
+		<div class="col-md-10 col-md-offset-1">
+			<div class="jumbotron jumbotron-category">
+
+			</div>
+			<div class="btn-category-s"><%= link_to "Upload New Image", new_category_image_path(@category), class: "btn btn-lg btn-success"%></div>
+			<% @category.images.each do |image| %>
+				<div class="col-md-4">
+					<%= image_tag(image.photo.url(:thumb), class: "img-thumbnail img-category-s") %>
+				</div>
+			<% end %>
+	</div>
+</div>
