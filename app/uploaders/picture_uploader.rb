@@ -7,7 +7,11 @@ class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   
   version :thumb do
-    process resize_to_fill: [400,400]
+    process resize_to_fill: [300,250]
+  end
+
+  version :small do
+    process resize_to_fill: [60,60]
   end
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?

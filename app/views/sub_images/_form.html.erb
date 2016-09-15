@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="col-md-6">
+		<%= render 'shared/errors', obj: @sub_image %>
+		<div class="well well-f">
+			<%= form_for @sub_image do |f| %>
+				<div class="form-group">
+					<%= f.label :small_image %>
+			    <%= f.file_field :small_image, accept: 'image/jpeg,image/gif,image/png,image/jpg' %>
+		    </div>
+				<div class="form-group">
+					<%= f.submit class: 'btn btn-primary' %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
+
+
+	

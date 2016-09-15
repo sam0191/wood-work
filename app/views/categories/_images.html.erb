@@ -1,0 +1,26 @@
+<% @category.images.each do |image| %>
+	<div class="col-md-6"  id= "panel_<%= image.id %>" >
+		
+			<div class="panel panel-default panel-show">
+				<div class="panel-body panel-body-show">
+					<%= image_tag(image.photo.url(:thumb), class: "img-in img-responsive") %>
+					<%= link_to "delete", category_image_path(@category, image), remote: true, method: :delete, data: {confirm: "Are you sure?"} %> 					  <%= link_to "edit", edit_category_image_path(@category, image) %>
+					<ul class="imgs-tables">	
+						<li><h2><%= image.i_name %></h2></li>
+						<hr class="for-title">
+						<li class="second-one"><p><%= image.i_bio %></p></li>
+						<% if image.price %>
+							<li class="price-title"><h3> Price: </h3> </li> <li class="price-li"><h4 class="for-price"><%= image.price %><i class="fa fa-ils"></i></h4></li><br/>
+							<hr class="price-line-up">
+							<hr class="price-line-down">
+						<% end %>
+					</ul>
+				<ul class="sub-images-show">	
+					<% image.sub_images.each do |sub_image| %>
+						<li><%= image_tag(sub_image.small_image.url(:small))  %></li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+<% end %>

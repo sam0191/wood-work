@@ -7,6 +7,13 @@ ul.category-show-p {
 	list-style: none;
 	padding: 0px;
 }
+.well-coll {
+  position: absolute;
+  height: auto;
+  margin-left: 50px;
+  width: 93%;
+  background-color: #eceff0 !important;
+}
 
 .jumbotron-category {
 	margin-top: 100px;
@@ -20,3 +27,82 @@ ul.category-show-p {
 .btn-category-s {
 	margin-bottom: 20px;
 }
+
+/*
+.img-in {
+	overflow: hidden;
+}
+*/
+.img-in {
+	margin-bottom: 2px;
+}
+.sub-images-show {
+  display: flex;
+  float: left;
+  padding-left: 0px;
+}
+.panel-show {
+	border-left: 0 !important;
+	border-top: 0 !important;
+	border-right: 0 !important;
+	margin-top: 50px;
+}
+.panel-body-show {
+	background-color: #eceff0;
+	padding-bottom: 30px !important;
+}
+
+
+ul {
+		list-style: none;
+}
+
+ul.imgs-tables {
+	color: #636363;
+	text-align: center;
+	li.price-li {
+		display: inline-block;
+    margin-bottom: 0;
+	}
+	li.price-title {
+		text-align: center;
+		display: inline-block;
+    margin-bottom: 0;
+	}
+	
+
+	hr {
+		border-top: 1px solid lightgrey !important;
+	}
+	hr.for-title {
+		width: 200px !important;	
+	  display: inline-block;
+
+  }
+
+  hr.price-line-up {
+  	margin-bottom: 5px;
+  	width: 100px !important;
+    margin-left: 323px;
+    margin-top: 0px;
+  }
+
+  hr.price-line-down {
+  	margin-top: 0px;	
+  	width: 100px !important;
+    margin-left: 323px;
+    margin-bottom: 0px;
+  }
+}
+
+ul.border-for-price {
+		border: 2px solid black;
+		display: inline-block;
+}
+/*
+.for-price {
+
+	border: 2px solid black;
+}
+
+*/

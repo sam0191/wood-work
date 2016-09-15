@@ -1,16 +1,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "font-awesome";
 .navbar {
 	background-color: #fff;
 }
 
 body {
 	height: 100%;
+	background-color: white;
 }
-
+/*
+.jumbotron {
+	background-color: white;
+}
+*/
 .width-r {
   position: relative;
+}
+
+.well-f {
+	background-color: white;
 }
 
 .well-f {

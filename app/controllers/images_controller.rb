@@ -6,6 +6,7 @@ class ImagesController < ApplicationController
 
 	def new
 		@image = @category.images.build
+		@sub_images = @image.sub_images.build
 	end
 
 	def create
@@ -19,6 +20,7 @@ class ImagesController < ApplicationController
 
 	def edit
 		@image = @category.images.find(params[:id])
+		@sub_images = @image.sub_images
 	end
 
 	def update
@@ -37,7 +39,10 @@ class ImagesController < ApplicationController
 	def destroy
 		@image = @category.images.find(params[:id])
 		@image.destroy
-		redirect_to category_path(@category)
+		respond_to do |format|
+      format.html { redirect_to category_path(@category) }
+      format.js
+    end
 	end
 
 	private
@@ -46,6 +51,6 @@ class ImagesController < ApplicationController
 	end
 
 	def image_params
-		params.require(:image).permit(:photo)
+		params.require(:image).permit(:photo, :i_name, :i_bio, :price, sub_images_attributes: [:image_id, :small_image])
 	end
 end

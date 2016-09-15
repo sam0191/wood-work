@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :categories do
     resources :images
   end
+  resources :sub_images
+  resources :inside_images
+  resources :wood_elemnts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

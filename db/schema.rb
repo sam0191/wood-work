@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160811130720) do
+ActiveRecord::Schema.define(version: 20160913160648) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "profile_image"
@@ -24,6 +24,32 @@ ActiveRecord::Schema.define(version: 20160811130720) do
   create_table "images", force: :cascade do |t|
     t.string   "photo"
     t.string   "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "i_name"
+    t.string   "i_bio"
+    t.string   "price"
+  end
+
+  create_table "inside_images", force: :cascade do |t|
+    t.string   "picture"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "sub_images", force: :cascade do |t|
+    t.string   "small_image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "image_id"
+  end
+
+  add_index "sub_images", ["image_id"], name: "index_sub_images_on_image_id"
+
+  create_table "wood_elemnts", force: :cascade do |t|
+    t.string   "wood_elemnt"
+    t.integer  "number"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
